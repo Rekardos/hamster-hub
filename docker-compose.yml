@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  hamster-activity-tracker:
+    build:
+      context: ./hamster-activity-tracker
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+
+  hamster-sensor-simulator:
+    build:
+      context: ./hamster-sensor-simulator
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
